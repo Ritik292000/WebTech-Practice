@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var foodItem=[
+							{name:"samosa",price:10},
+							{name:"jalebi",price:12},
+							{name:"vadapav",price:18},
+							{name:"poha",price:15},
+							{name:"kachori",price:20}
+						];
+
+		//case1:
+		/*	var newRecords=foodItem.map(food=>{
+								if(food.price>10){
+									return food.price/2;
+								}
+								else{
+									return food.price;
+								}
+							});
+		*/
+
+		//case2:
+		/*	var newRecords=foodItem.map(food=>{
+								if(food.price>13){
+									return {name:food.name,price:food.price/2};
+								}
+								else{
+									return {name:food.name,price:food.price};
+								}
+
+							});
+		*/
+		
+
+		//case3:
+			var newRecords=foodItem.map(food=>
+								food.price>10?{name:food.name,price:food.price/2}
+											 :food
+								);
+			console.log(newRecords);
+		</script>
+	</body>
+</html>

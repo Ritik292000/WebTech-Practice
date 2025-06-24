@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+			table{
+				border:1px solid black;
+				margin:12px auto;
+				border-collapse:collapse;
+			}
+			td{
+				border:1px solid black;
+				padding:10px 20px;
+				font-family:verdana;
+			}
+		</style>
+	</head>
+	<body>
+		<table id="city"></table><br><br>
+		<input type="button" value="show Cities" onclick="showCities()">
+		<script> 
+			var arr=['JBP','Bhopal','Indore','Katni'];
+			var tbl=document.getElementById('city');
+			function showCities(){
+				for(var i=0;i<arr.length;i++){
+					var row=tbl.insertRow(i);
+					var cell=row.insertCell(0);
+					cell.innerHTML=arr[i];
+				}
+			}
+		</script>
+	</body>
+</html>

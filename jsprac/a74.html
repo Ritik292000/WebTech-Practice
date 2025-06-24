@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+			table{
+				border:1px solid red;
+				width:30%;
+				margin:20px auto;
+				border-collapse:collapse;
+			}
+			td{
+				border:1px solid red;
+			}
+			.a{
+				text-align:right;
+			}
+		</style>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td class="a">
+				<input type="checkbox" id="x" onclick="selectAll(this)">
+				</td>
+				<td>Select All</td>
+			</tr>
+			<tr>
+				<td class="a">
+				<input type="checkbox" name="food" value="poha">
+				</td>
+				<td>Poha</td>
+			</tr>
+			<tr>
+				<td class="a">
+				<input type="checkbox" name="food" value="samosa">
+				</td>
+				<td>Samosa</td>
+			</tr>
+			<tr>
+				<td class="a">
+				<input type="checkbox" name="food" value="jalebi">
+				</td>
+				<td>Jalebi</td>
+			</tr>
+		</table>
+		<script>
+			var allchk=document.getElementsByName('food');
+			function selectAll(curElm){
+				for(var y of allchk){
+					y.checked=true;
+				}
+			}
+		</script>
+	</body>
+</html>

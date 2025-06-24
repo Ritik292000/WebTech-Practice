@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+			div{
+				border:1px solid red;
+				padding:20px;
+				height:20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<script>
+			var dv=document.querySelector("div");
+			var arr=["mohan","sohan","rohan"];
+			var str=' ';
+			for(i=0;i<arr.length;i++){
+				str+=(arr[i]+'#');
+			}
+			dv.innerHTML=str;
+			console.log(str);
+		</script>
+	</body>
+</html>

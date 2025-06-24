@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<input type="button" value="start" onclick="startIntv()">
+		<input type="button" value="stop" onclick="stopIntv()">
+		<script>
+			var intv=setInterval(aaa,4000);
+			function aaa(){
+				alert('Ritik you are Great');
+			}
+			function stopIntv(){
+				clearInterval(intv);
+			}
+			function startIntv(){
+				intv=setInterval(aaa,4000);
+			}
+		</script>
+	</body>
+</html>

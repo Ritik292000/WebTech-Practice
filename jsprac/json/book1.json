@@ -1,0 +1,14 @@
+[
+	{
+		"title":"Java",
+		"price":3000
+	},
+	{
+		"title":"Adv Java",
+		"price":4000
+	},
+	{
+		"title":"JavaScript",
+		"price":2500
+	},
+]

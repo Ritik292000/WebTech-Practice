@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>	
+			var foodItems=[
+							{'name':'samose',price:15},
+							{'name':'jalebi',price:8},
+							{'name':'kachori',price:20},
+							{'name':'poha',price:12},
+							{'name':'mangodi',price:8}
+						  ];
+			console.log(foodItems);
+			var filtered=foodItems.filter(food=>food.price>10);
+			var discounted=filtered.map(food=>`The ${food.price} of ${food.name} is now									${food.price/2}`
+										);
+			console.log(discounted);
+		</script>
+	</body>
+</html>

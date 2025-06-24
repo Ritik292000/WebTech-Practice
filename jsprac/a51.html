@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+			.abc{
+				font-size:32px;
+				background-color:yellow;
+				color:red;
+				border:1px solid red;
+				font-family:verdana;
+			}
+		</style>
+	</head>
+	<body>
+		<button onclick="changeStyle()">Change Style</button>
+		<br><br>
+		<span id="x">Mohan is in class 12th</span>
+		<script>
+			var txt=document.getElementById('x');
+			function changeStyle(){
+				txt.className="abc";
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>	
+	<head>	
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var records=[9,23,5,78,7];
+		//case1:	
+		/*	var res=records.find(rec=>{
+									if(rec>40){
+										return true;
+									}
+									else{
+										return false;
+									}
+								
+								});
+
+		*/
+
+		//case2:
+		/*	var res=records.find(rec=>{
+									return rec>40
+								});
+
+		*/
+
+		//case3:
+			var res=records.find(rec=>rec>40);
+
+			console.log(res);
+		</script>
+	</body>
+</html>

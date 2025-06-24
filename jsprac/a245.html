@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var x=10;
+			console.log(x);
+			{
+				console.log(x);
+					//ReferenceError : at this line which is x cannot be accessed without initializing which means hoisting took place here but as hoisting doesnot hoist variable value that is why without value LET didnt allowed it
+				let x=2;
+				console.log(x);
+			}
+			console.log(x);
+		</script>
+	</body>
+</html>

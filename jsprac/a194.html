@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+			form{
+				background-color:#fff;
+				padding:20px;
+				text-align:center;
+				margin:50px auto;
+				width:30%;
+			}
+			body{
+				background-color:#eee;
+			}
+			input[type=text]{
+				margin-bottom:10px;
+				width:80%;
+			}
+		</style>
+	</head>
+	<body>
+		<form>
+			UserName:<input type="text" id="username" placeholder="User Name"><br><br>
+			<input type="submit" value="save">
+		</form>
+		<script>
+			var form=document.querySelector('form');
+			var unm=form.username;
+			form.addEventListener('submit',e=>{
+											e.preventDefault();
+										//	var pattern=/^[a-z]{3,10}$/;
+										//	var pattern=/^[a-zA-Z0-9]{3,20}$/;
+											var pattern=/^.{3,30}$/;
+											var result=pattern.test(unm.value);
+											console.log(result);
+									});
+		</script>
+	</body>
+</html>

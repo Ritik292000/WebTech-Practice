@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			const collectRecords=(responseHeader)=>{
+				const request=new XMLHttpRequest();
+				request.addEventListener('readystatechange',()=>{
+					if(request.readyState==4&&request.status==200){
+						const response=JSON.parse(request.responseText);
+						responseHeader(undefined,response);
+					}
+					else if(request.readyState==4){
+						requestHeader("No matching Found",undefined);
+					}
+				});
+				request.open('GET','https://jsonplaceholder.typicode.com/todos/1');
+				request.send();
+			};
+			console.log(1);
+			console.log(2)
+			collectRecords((err,data)=>{
+				console.log("response recieved ...");
+				if(err){
+					console.log(error);
+				}else{
+					console.log(data);
+				}
+			});
+			console.log(3);
+			console.log(4);
+		</script>
+	</body>
+</html>

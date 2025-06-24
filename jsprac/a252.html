@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			const x=[2,3,4];
+	//		x=[2,1];
+	
+			console.log(x);
+			
+				//TypeError: x is a constant which means the array inside it is, is a 3 index array so it cannot be changed to 2 index array
+
+			x[0]=23;
+	
+			console.log(x);
+				//We are not changing the indexing of array we are just changing the values inside those indexes which is allowed
+		</script>
+	</body>
+</html>

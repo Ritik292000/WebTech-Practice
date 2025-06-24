@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+			li{
+				background-color:#fff;
+				color:#555;
+				border:1px solid #eee;
+				font-family:arial;
+				padding:5px 8px;
+				list-style:none;
+				cursor:pointer;
+			}
+			#dv{
+				border:1px solid green;
+				padding:50px;
+				width:300px;
+				margin:100px auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="dv">
+			<ul>
+				<li>Monday</li>
+				<li>Tuesday</li>
+				<li>Wednesday</li>
+				<li>Thursday</li>
+				<li>Friday</li>
+			</ul>
+		</div>
+		<script>
+		//	var lis=document.querySelectorAll('li');
+
+		//lis is the case for event bubble
+			var ul=document.querySelector('ul');
+			ul.addEventListener('click',e=>{
+								//	console.log(e.target,'---');
+									e.target.remove();
+									});
+
+		//ul is the case for event delegation
+
+		/*
+			lis.forEach(li=>{
+							li.addEventListener('click',e=>{
+													//	e.stopPropagation();
+														console.log('li clicked');
+														e.target.remove();
+												});
+								});
+		*/
+		</script>
+	</body>
+</html>

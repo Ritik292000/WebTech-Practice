@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>	
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var records=[
+							{name:"mohan",marks:12},
+							{name:"sohan",marks:54},
+							{name:"rohan",marks:22},
+							{name:"mohan",marks:65},
+							{name:"gohan",marks:23}
+						];
+			var res=records.reduce((acc,cur)=>{
+										if(cur.name=='mohan'){
+											acc+=cur.marks;
+										}
+										return acc;
+									},0);
+			console.log(res);
+		</script>
+	</body>
+</html>

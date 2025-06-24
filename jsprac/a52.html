@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+			#y{
+				font-size:56px;
+			}
+		</style>
+	</head>
+	<body>
+		<img src="img/dora.jpg" onmouseover="imageOver(this)" onmouseout="imageOut(this)">
+		<br><br>
+		<span id="y">No Action</span>
+		<script>
+			var y=document.getElementById('y');
+			function imageOver(curElm){
+				y.innerHTML='over';
+			}
+			function imageOut(curElm){
+				y.innerHTML='out';
+			}
+		</script>
+	</body>
+</html>

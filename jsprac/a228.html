@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+		//	console.log('---1---',x);
+				//ReferenceError:x is not defined;
+			function pro(){
+				console.log('---2---',x);
+				{
+					console.log('---3---',x);
+					var x=3;
+					console.log('---4---',x);
+				}
+				console.log('---5---',x);
+			}
+			pro();
+		//	console.log('---6---',x);
+				//ReferenceError
+		</script>
+	</body>
+</html>

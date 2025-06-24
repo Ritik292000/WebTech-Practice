@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+			#b{
+				border:3px solid red;
+				padding:30px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" onclick="showNextImages()" value="Next" id="a"><br>
+		<div id="b"><div>
+		<script>
+			var btn=document.getElementById('a');
+			var dv=document.getElementById('b');
+			var arr=['pkm.jpg','ele.jpg','dora.jpg','mon.png'];
+			var i=0;
+			function showNextImages(){
+				var m=document.createElement('img');
+				m.src='img/'+arr[i++];
+				if(i==arr.length){
+					i=0;
+				}
+				dv.appendChild(m);
+			}
+		</script>
+	</body>
+</html>

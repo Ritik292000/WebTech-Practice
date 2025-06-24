@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			const getData = (handleResponse)=>{
+				const request = new XMLHttpRequest();
+				request.addEventListener('readystatechange',()=>{
+					if(request.readyState==4&&request.status==200){
+						const response = JSON.parse(request.responseText);
+						handleResponse(undefined,response);
+					}
+					else if(request.readyState==4){
+						handleResponse("No matching found",undefined);
+					}
+				});
+				request.open('GET','json/book1.json');
+				request.send();
+			};
+			getData((err,data)=>{
+				if(err){
+					console.log(err);
+				}
+				else{
+					console.log(data);
+				}
+			});
+		</script>
+	</body>
+</html>

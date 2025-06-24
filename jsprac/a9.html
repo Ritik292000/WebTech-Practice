@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<h1 id="a">text 1</h1>
+		<h1 id="b" class="x">text 2</h1>
+		<h1 id="c">text 3</h1>
+		<h1 id="d">text 4</h1>
+		<h1 id="e" class="x">text 5</h1>
+		<script>
+			var t=document.getElementsByClassName('x');
+		/*	alert(t);
+			alert(t.length);
+			alert(t[0].innerHTML);
+			alert(t[1].innerHTML);
+		*/
+
+			for(var i=0;i<t.length;i++){
+				alert(t[i].innerHTML);
+			}
+		</script>
+	</body>
+</html>

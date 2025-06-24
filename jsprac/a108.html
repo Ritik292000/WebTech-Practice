@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<strong>Press:</strong><br>
+		1 for option A<br>
+		2 for option B<br>
+		3 for option C<br>
+		4 for option D<br>
+		<input type="number" id="x" maxlength="1"><br><br>
+		<input type="button" value="submit" onclick="processRecord()">
+		<script>
+			var x=document.getElementById('x');
+			function processRecord(){
+				var val=parseInt(x.value);
+				switch(val){
+					case 1:
+						console.log('option 1 is served');
+						break;
+					case 2:
+						console.log('option 2 is served');
+						break;
+					case 3:
+						console.log('option 3 is served');
+						break;
+					case 4:
+						console.log('option 4 is served');
+						break;
+					default:
+						console.log('no such option');
+				}
+			}		
+		</script>
+	</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<img src="img/1d.jpg" id="x">
+		<script>
+			var x=document.getElementById('x');
+			x.onclick=diceRollar;
+			function diceRollar(){
+				var rand=Math.random()*6;
+				var val=Math.trunc(rand)+1;
+				x.src=`img/${val}d.jpg`;
+			}
+		</script>
+	</body>
+</html>

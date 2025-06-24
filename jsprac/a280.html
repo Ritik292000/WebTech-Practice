@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			class User{
+				addName(name){
+					this.name=name;
+					return this;
+				}
+				addEmail(email){
+					this.email=email;
+					return this;
+				}
+				addPhone(phone){
+					this.phone=phone;
+					return this;
+				}
+			}
+			let u=new User().addName('om').addEmail('om@gmail.com').addPhone(100000);
+			console.log(u);
+		</script>
+	</body>
+</html>

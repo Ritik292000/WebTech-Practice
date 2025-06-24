@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+			div{
+				border:1px solid red;
+				height:20px;
+				padding:20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<script>
+			var dv=document.querySelector("div");
+			var obj=new Object();
+			var type=typeof obj;
+			dv.innerHTML=type;
+			console.log(type);
+		</script>
+	</body>
+</html>

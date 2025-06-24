@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		Min:<input type="text" id="min"><br><br>
+		Max:<input type="text" id="max"><br><br>
+		<input type="button" value="value" onclick="randRange()">
+		<br><br><br>
+		<h1 id="x"><h1>
+		<script>
+			var x=document.getElementById('x');
+			var maxFld=document.getElementById('max');
+			var minFld=document.getElementById('min');
+			function randRange(){
+				var max=parseInt(maxFld.value);
+				var min=parseInt(minFld.value);
+				var val=Math.trunc(Math.random()*(max-min))+min;
+				x.innerHTML=`Random Number(max-${max}/min-${min}: ${val})`;
+			}
+		</script>
+	</body>
+</html>

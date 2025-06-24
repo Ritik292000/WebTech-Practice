@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			class Student{
+				constructor(name,email){
+					this.name=name;
+					this.email=email;
+				}
+				login(){
+					console.log(`${this.name} is logging in...`);
+				}
+			}
+			let st1=new Student('mukesh','muku@gmail.com');
+			let st2=new Student('vikas','vik@gmail.com');
+
+			console.log(st1.name,st1.email);
+			console.log(st2.name,st2.email);
+
+			console.log(st1.toString());
+			console.log(st2.toString());
+
+			st1.login();
+			st2.login();
+
+			
+		</script>
+	</body>
+</html>

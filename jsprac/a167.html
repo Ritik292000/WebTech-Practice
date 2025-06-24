@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<img src="img/1d.jpg" id="x" onclick="rotateDice()">
+		<script>
+			var x=document.getElementById('x');
+			function rotateDice(){
+				x.src="img/dice.gif";
+				setTimeout(changeDiceFace,1000);
+			}
+			function changeDiceFace(){
+				var rand=Math.random()*6;
+				var val=Math.trunc(rand)+1;
+				x.src=`img/${val}d.jpg`;
+			}	
+		</script>
+	</body>
+</html>

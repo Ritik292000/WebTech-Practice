@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<img src="img/mon.png" id="a" onclick="changeImages()">
+		<script>
+			var m=document.getElementsByTagName('img')[0];
+			var arr=['pkm.jpg','ele.jpg','dora.jpg','mon.png'];
+			var i=0;
+			function changeImages(){
+				m.src='img/'+arr[i];
+				i++;
+				if(i==arr.length){
+					i=0;
+				}
+			}
+		</script>
+	</body>
+</html>

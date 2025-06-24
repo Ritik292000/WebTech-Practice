@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			class A{
+				constructor(a1){
+					this.a1=a1;
+				}
+				aaa(){
+					console.log('aaa in A');
+				}
+			}
+			class B extends A{
+				constructor(a1,b1){
+					super(a1);
+					this.b1=b1;
+				}
+				bbb(){
+					console.log('bbb in B');
+				}
+			}
+			let b=new B('a_','b_');
+			console.log(b);
+		</script>
+	</body>
+</html>

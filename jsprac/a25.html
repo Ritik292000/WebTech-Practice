@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<form action="#">
+			FirstName:<input type="text" value="Yamraj"><br><br>
+			LastName:<input type="text" value="Kumar"><br><br>
+			Mobile:<input type="tel" value="9876543221"><br><br>
+			Email:<input type="email" value="yamraj@gmail.com"><br><br>
+			Password:<input type="password" value="1234455"><br><br>
+				Food Option:<br><br>
+			Samosa:<input type="checkbox" value="samosa"><br><br>
+			Jalebi:<input type="checkbox" checked value="Jalebi"><br><br>
+			Poha:<input type="checkbox" value="Poha"><br><br>
+				City:<select>
+						<option>JBP</option>
+						<option selected >Bhopal</option>
+						<option>Indore</option>
+						<option>Katni</option>
+					</select><br><br>
+			Message:<textarea value="corona"></textarea><br><br>
+			<input type="submit" value="save">
+		</form>
+		<script>
+			var form=document.forms[0];
+		//	alert(form);
+			var elm=form.elements;
+		//	alert(elm);
+		//	alert(elm.length);
+			for(var i=0;i<elm.length;i++){
+				alert(elm[i].value);
+			}
+		</script>
+	</body>
+</html>

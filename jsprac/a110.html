@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+			table{
+				border:1px solid red;
+				margin:20px auto;
+				width:50%;
+				border-collapse:collapse;
+			}
+			td{
+				border:1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" value="submit" onclick="showRecord()"><br>
+		<table id="a">
+		</table>
+		<script>
+			var names=['mohan','sohan','rohan'];
+			var ages=[12,3,6];
+			var phones=['11111','22222','444444'];
+			var rec=[names,ages,phones];
+			var tbl=document.getElementById('a');
+			function showRecord(){
+				for(var i=0;i<rec.length;i++){
+					var rows=tbl.insertRow(i);
+					for(var j=0;j<rec[i].length;j++){
+						var cells=rows.insertCell(j);
+						cells.innerHTML=rec[i][j];
+					}
+				}
+			}	
+		</script>
+	</body>
+</html>

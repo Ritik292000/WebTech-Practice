@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			let x=10;
+			console.log(x);
+			{
+				console.log(x);
+					//Reference Error: x cannot be accessed without initializing also BLOCKED LEVEL LET WILL NOT GET AFFECTED BY GLOBAL SCOPE LET
+				let x=2;
+				console.log(x);
+			}
+			console.log(x);
+		</script>
+	</body>
+</html>

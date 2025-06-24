@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+			div{
+				border:1px solid red;
+				height:20px;
+				padding:20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<script>
+			var dv=document.querySelector("div");
+			var records=[12,33,54,23,34,78];
+			var filtered=records.filter(recs=>{
+							if(recs>35){
+								return recs;
+							}
+						});
+			dv.innerHTML=filtered;
+		</script>
+	</body>
+</html>

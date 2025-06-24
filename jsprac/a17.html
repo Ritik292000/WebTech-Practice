@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<form action="#">
+			FirstName:<input type="text" value="Yamraj"><br><br>
+			LastName:<input type="text" value="Kumar"><br><br>
+			Mobile:<input type="tel" value="98541547561"><br><br>
+			Email:<input type="email"><br><br>
+			Password:<input type="password"><br><br>
+				Food Option:<br><br>
+			Samosa:<input type="checkbox"><br><br>
+			Poha:<input type="checkbox"><br><br>
+			Jalebi:<input type="checkbox"><br><br>
+				City:<select>
+						<option>JBP</option>
+						<option>Bhopal</option>
+						<option>Indore</option>
+						<option>Katni</option>
+					</select>
+			<input type="submit" value="register">
+		</form>
+		<script>
+			var x=document.querySelectorAll('[type=text]');
+			for(var i=0;i<x.length;i++){
+				document.write('<h1>'+x[i].value+'</h1>');
+			}
+		</script>
+	</body>
+</html>

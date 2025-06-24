@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function User(name,email){
+				this.name=name;
+				this.email=email;
+			}
+			User.prototype.login=function(){
+				console.log(`${this.name} is logging in....`);
+			}
+			User.prototype.logout=function(){
+				console.log(`${this.name} is logging out...`);
+			}
+			let st1=new User('mohan','mohan@gmail');
+			console.log(st1);
+			st1.login();
+			st1.logout();
+			function Student(name,email){
+					//........................Code Duplication
+				this.name=name;
+				this.email=email;
+			}
+			let s=new Student('sudheer','sudh@gmail.com');
+			console.log(s);
+		</script>
+	</body>
+</html>

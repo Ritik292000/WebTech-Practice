@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var records=[
+						{'name':'mohan',age:23},
+						{'name':'ahan',age:32},
+						{'name':'vikas',age:21},
+						{'name':'binod',age:45}
+						];
+			records.sort(compare);
+	//case1:
+		/*		function compare(x,y){
+				if(x.age>y.age){
+					return +1;
+				}
+				else if(x.age<y.age){
+					return -1;
+				}
+				else{
+					return 0;
+				}
+			}
+		*/
+
+	//case2:
+				function compare(x,y){
+				return x.age-y.age
+			}
+		
+			console.log(records);
+		</script>
+	</body>
+</html>

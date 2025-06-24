@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+			table{
+				border:1px solid red;
+				margin:12px auto;
+				border-collapse:collapse;
+			}
+			td{
+				border:1px solid red;
+				padding:10px ;
+				font-family:verdana;
+				font-size:20px;
+			}
+		</style>
+	</head>
+	<body>
+		<table id="a"></table>
+		<input type="button" value="Show Next Record" onclick="showNext()">
+		<script>
+			var tbl=document.getElementById('a');
+			var arr=['I','will','be','successful'];
+			var i=0;
+			function showNext(){
+				var row=document.createElement('tr');
+				var cell=document.createElement('td');
+				cell.innerHTML=arr[i++];
+				if(i==arr.length){
+					i=0;
+				}
+				row.appendChild(cell);
+				tbl.appendChild(row);
+			}
+		</script>	
+	</body>
+<html>

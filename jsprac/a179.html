@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+			#a{
+				border:1px solid red;
+				padding:10px;
+				width:80%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="a"></div>
+		<select id="b">
+			<option value="0">Select type</option>
+			<option value="1">Text</option>
+			<option value="2">Password</option>
+			<option value="3">Radio</option>
+			<option value="4">Checkbox</option>
+		</select>
+		<input type="button" value="create" id="c">
+		<script>
+			var a=document.querySelector('#a');
+			var b=document.querySelector('#b');
+			var c=document.querySelector('#c');
+			c.onclick=creatlm;
+			function creatlm(){
+					var val=parseInt(b.value);
+					var inp=document.createElement('input');
+					if(val==1){
+						inp.setAttribute('type','text');
+					//	console.log(inp.getAttribute('type'));
+					}
+					else if(val==2){
+							inp.setAttribute('type','password');
+					}
+					else if(val==3){
+							inp.setAttribute('type','radio');
+					}
+					else if(val==4){
+							inp.setAttribute('type','checkbox');
+					}
+					a.append(inp);
+			}
+		</script>
+	</body>
+</html>

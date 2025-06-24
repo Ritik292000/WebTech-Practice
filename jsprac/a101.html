@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		Tea?(y/n)<input type="text" maxlength="1" size="10" id="x">
+		<br><br>
+		<input type="button" value="submit" onclick="serveDrink()">
+		<script>
+			var x=document.getElementById('x');
+			function serveDrink(){
+				if(x.value=='y'){
+					console.log('serve tea');
+				}
+			}
+		</script>
+	</body>
+</html>

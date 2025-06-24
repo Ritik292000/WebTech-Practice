@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+			img{
+				position:absolute;
+			}
+			div{
+				position:relative;
+			}
+			#b{
+				opacity:0.0;
+		</style>
+	</head>
+	<body>
+		<div>
+			<img src="img/dora.jpg" id="a">
+			<img src="img/pkm.jpg" id="b">
+		</div>
+		<script>
+			var a=document.getElementById('a');
+			var b=document.getElementById('b');
+			var op1=0.9;
+			var op2=0.1;
+			setInterval(dissolve,500);
+			function dissolve(){
+				a.style.opacity=op1;
+				op1-=0.1;
+				b.style.opacity=op2;
+				op2+=0.1;
+			}
+		</script>
+	</body>
+</html>

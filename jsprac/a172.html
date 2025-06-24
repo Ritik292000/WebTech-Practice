@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+			img{
+				height:300px;
+				width:300px;
+				position:absolute;
+			}
+			div{
+				position:relative;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<img src="img/dora.jpg" id="a">
+			<img src="img/2.png" id="b">
+			<img src="img/3.png" id="c">
+			<img src="img/4.png" id="d">
+			<img src="img/5.jpg" id="e">
+		</div>
+		<script>
+			var nodeList=document.querySelectorAll('img');
+			var x=nodeList.length;
+			nodeList.forEach(node=>{
+									node.style.zIndex=x--;
+								});
+			var i=0;
+			var intv=setInterval(dissolve,300);
+			var op=0.9;
+			function dissolve(){
+				nodeList[i].style.opacity=op;
+				op-=0.1;
+				if(op<0){
+						clearInterval(intv);
+						op=0.9;
+						i++;
+						if(nodeList.length==i){
+							op=0.1;
+							i--;
+							intv=setInterval(show,300);
+						}
+						else{
+							intv=setInterval(dissolve,300);
+						}
+				}
+			}
+			function show(){
+				nodeList[i].style.opacity=op;
+				op+=0.1;
+				if(op>1){
+					clearInterval(intv);
+					op=0.1;
+					i--;
+					if(nodeList[i]){
+						intv=setInterval(show,300);
+					}
+					else{
+						op=0.9;
+						i++;
+						intv=setInterval(dissolve,300);
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

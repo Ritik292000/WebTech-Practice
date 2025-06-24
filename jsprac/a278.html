@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+		//Case1:	
+			/*	class User{
+					addName(){
+						console.log("########");
+					}
+				}
+				let u=new User();
+				u.addName();
+			*/
+
+				class User{
+					addName(name){
+						this.name=name;
+						console.log(`${this.name} is logging in..`);
+					}
+				}
+				let u=new User();
+				u.addName('mohan');
+				console.log(u.name);
+		</script>
+	</body>
+</html>

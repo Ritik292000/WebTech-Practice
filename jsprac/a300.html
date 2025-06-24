@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>	
+		<title></title>
+	</head>
+	<body>
+		<script>
+			const request=new XMLHttpRequest();
+			request.addEventListener('readystatechange',e=>{
+				if(request.readyState==4){
+					console.log(request.responseText);
+				}
+			});
+			request.open('GET','https://jsonplaceholder.typicode.com/todos/1');
+			request.send();
+		</script>
+	</body>
+</html>

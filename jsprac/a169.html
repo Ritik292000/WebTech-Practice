@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<img src="img/dora.jpg">
+		<script>
+			var img=document.querySelector('img');
+			var op=0.9;
+			var intv=setInterval(dissolve,500);
+			function dissolve(){
+				img.style.opacity=op;
+				op-=0.1;
+				if(op<0.0){
+					clearInterval(intv);
+					img.style.opacity=1;
+				}
+			}
+		</script>
+	</body>
+</html>

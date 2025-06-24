@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<h1 id="x"></h1>
+		<h1 id="y"></h1>
+		<input type="button" value="show" onclick="changeXyz()">
+		<script>
+			var x=document.getElementById('x');
+			var y=document.getElementById('y');
+			function changeXyz(){
+				var date=new Date();
+				x.innerText=date;
+				//	date.setDate(4);
+				//	date.setMonth(8);
+				//	date.setYear(123);
+				//	date.setFullYear(1924);
+				//	date.setHours(8);
+				//	date.setMinutes(55);
+					date.setDate(date.getDate()+4);
+				y.innerText=date;
+			}
+		</script>
+	</body>
+</html>

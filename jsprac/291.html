@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function User(name,age){
+				this.name=name;
+				this.age=age;
+			}
+			User.prototype.login=function(){
+				console.log(`${this.name} is logging in...`);
+			}
+			User.prototype.logout=function(){
+				console.log(`${this.name} is logging out...`);
+			}
+			function Student(name,age){
+				User.call(this,name,age);
+			}
+			Student.prototype=Object.create(User.prototype);
+			let st1=new Student('ritik','rc@gmail.com');
+			console.log(st1);
+			st1.login();
+			st1.logout();
+		</script>
+	</body>
+</html>

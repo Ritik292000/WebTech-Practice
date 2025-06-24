@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<form action="a110.html">
+			UserName:<input type="text" name="unm"><br><br>
+			<input type="submit" value="save">
+		</form>
+		<script>
+			var form=document.forms[0];
+			form.addEventListener('submit',e=>{	
+											e.preventDefault();
+											console.log(e.target);
+									});
+		</script>
+	</body>
+</html>

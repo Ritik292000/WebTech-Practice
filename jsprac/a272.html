@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function User(name,age){
+				this.name=name;
+				this.age=age;
+				this.login=function(){
+					console.log(`${this.name} is logging in..`);
+				}
+				this.logout=function(){
+					console.log(`${this.name} is logging out..`);
+				}
+			}
+			let x=new User('mohan',12);
+			console.log(x.name,x.age);
+			x.login();
+			x.logout();
+		</script>
+	</body>
+</html>

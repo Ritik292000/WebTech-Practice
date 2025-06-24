@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<p>Mohan Kumar</p>
+		<p class="x">Sohan Kumar</p>
+		<p>Rohan Kumar</p>
+		<p class="x">Ganesh Kumar</p>
+		<script>
+		//Object HTMLCollecton
+		/*	var t=document.getElementsByClassName('x');
+			for(var i=0;i<t.length;i++){
+				alert(t[i].innerHTML);
+			}	*/
+		//Object NodeList
+			var t=document.querySelectorAll('.x');
+			for(var i=0;i<t.length;i++){
+				alert(t[i].innerHTML);
+			}
+		</script>
+	</body>
+</html>

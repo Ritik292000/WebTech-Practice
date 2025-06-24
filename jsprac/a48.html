@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+			#m{
+				border:1px solid #ccc;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" value="+" onclick="increaseWidth()" >
+		<input type="button" value="-" onclick="decreaseWidth()">
+		<br><br>
+		<img src="img/dora.jpg" width="50px" id="m">
+		<script>
+				var img=document.getElementById('m');
+				function increaseWidth(){
+					img.width=img.width + 10;
+				}
+				function decreaseWidth(){
+					img.width=img.width - 10;
+				}
+		</script>
+	</body>
+</html>

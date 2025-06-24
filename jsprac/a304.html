@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+			table{
+				border:1px solid #ccc;
+				margin:10px auto;
+			}
+			table th,td{
+				border:1px solid #ccc;
+				color:#555;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<table id="data_block">
+			<th>Id</th>
+			<th>UserId</th>
+			<th>Title</th>
+			<th>Completed</th>
+		</table>
+		<script>
+			const data_block=document.querySelector('#data_block');
+			const collectRecords=(responseHeader)=>{
+				const request=new XMLHttpRequest();
+				request.addEventListener("readystatechange",()=>{
+					if(request.readyState==4&&request.status==200){
+						const response=JSON.parse(request.responseText);
+						responseHeader(undefined,response);
+					}else if(request.readyState==4){
+						responseHeader("No Matching Found",undefined);
+					}
+				});
+				request.open('GET','https://jsonplaceholder.typicode.com/todos');
+				request.send();
+			}
+			collectRecords((err,data)=>{
+				if(err){
+					alert(err);
+				}
+				else{
+					let index=1;
+					for(i=0;i<data.length;i++){
+						let nrow=data_block.insertRow(index++);
+						let cell=0;
+						for(prop in data[i]){
+							let ncell=nrow.insertCell(cell++);
+							ncell.innerHTML=data[i][prop];
+						}
+					}
+				}
+			});
+		</script>
+	</body>
+</html>

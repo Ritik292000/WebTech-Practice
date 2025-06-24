@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+			.x{
+				color:red;
+				font-size:48px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="a">
+			<h1>Hello Text</h1>
+			<p>Some important information</p>
+			<p>we are working on js</p>
+			<p>Bharat China war</p>
+			<p>TikTok toh gya</p>
+		</div>
+		<script>
+			var dv=document.getElementById('a');
+			var recs=dv.children;
+		//	console.log(recs);
+
+		/*	recs.forEach(()=>{
+							console.log('++++');
+						});	*/
+
+		// Failed because recs is a HTML collection not a function
+
+			var arr=Array.from(recs);
+			arr.forEach(ar=>{
+							//	console.log(ar);
+								ar.classList.add('x');
+							});
+
+
+
+		</script>
+	</body>
+</html>

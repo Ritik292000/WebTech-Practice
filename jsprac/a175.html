@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+			.a{
+				font-size:48px;
+				border:1px solid #555;
+				padding:20px;
+			}
+			.b{
+				background-color:#ff4040;
+				color:white;
+			}
+			.c{
+				width:300px;
+			}
+		</style>
+	</head>
+	<body>
+		<p class="a" id="v">I can do this</p>
+		<p class="a b" id="w">I m the best</p>
+		<p class="a" id="x">God is with me</p>
+		<p class="a b c" id="y">Today is my day</p>
+		<p class="a" id="z">I m the king of this world</p>
+		<input type="button" value="Action on 3rd para" id="btn1">
+		<input type="button" value="Action on 4th para" id="btn2">
+		<script>
+			var v=document.getElementById('v');
+			var w=document.getElementById('w');
+			var x=document.getElementById('x');
+			var y=document.getElementById('y');
+			var z=document.getElementById('z');
+			var btn1=document.getElementById('btn1');
+			var btn2=document.getElementById('btn2');
+			btn2.addEventListener('click',()=>{
+										console.log(y.className);
+										y.classList.remove('c');
+										console.log(y.className);
+									});
+			btn1.onclick=action;
+			function action(){
+					console.log(x.className);
+				//	x.className='b';
+				//	x.className+='b';
+					x.classList.add('b');
+					console.log(x.className);
+
+			}
+		</script>
+	</body>
+</html>

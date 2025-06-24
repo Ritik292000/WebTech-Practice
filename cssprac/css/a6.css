@@ -1,0 +1,12 @@
+#nm{
+	border:1px solid red;
+	background-color:yellow;
+	width:300px;
+	text-align:center;
+	color:red;
+	font-family:verdana;
+	padding-top:20px;
+	border-radius: 10px;
+	padding-bottom: 20px;
+	cursor:pointer;
+}

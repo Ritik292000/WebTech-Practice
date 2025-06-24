@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<form action="a16.html">
+			<select onchange="showSelected(this)">
+				<option value="0">JBP</option>
+				<option value="23">Indore</option>
+				<option value="54">Bhopal</option>
+				<option value="45">Katni</option>
+			</select>
+			<input type="submit" value="Go">
+		</form>
+		<script>
+			function showSelected(curElm){
+			//	alert(curElm.selectedIndex);
+			//	alert(curElm.value);
+			//	alert(curElm.options[0]);
+				alert(curElm.options[curElm.selectedIndex].innerHTML);
+			}
+		</script>
+	</body>
+</html>

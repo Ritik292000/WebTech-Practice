@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var records=[34,56,87,22,13,67];
+			console.log(records);
+			var res=records.reduce(abc,0);
+			function abc(acc,curr){
+				if(curr>50){
+					acc++;
+				}
+				return acc;
+			}
+			console.log(res);
+		</script>
+	</body>
+</html>

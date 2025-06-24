@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>	
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function  User(name,age){
+				this.name=name;
+				this.age=age;
+			}
+			User.prototype.login=function(){
+				console.log(`${this.name} is logging in...`);
+			}
+			User.prototype.logout=function(){
+				console.log(`${this.name} is logging out...`);
+			}
+			function Student(name,age,degree){
+				User.call(this,name,age);
+				this.degree=degree;
+			}
+			Student.prototype=Object.create(User.prototype);
+			Student.prototype.homework=function(){
+				console.log(`${this.name} is doing his/her homework..`);
+			}
+			let st1=new Student('ritik','rc@gmail.com','BTECH');
+			console.log(st1);
+			st1.login();
+			st1.login();
+			st1.homework();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<div></div>
+		<script>
+			var records=[
+						{name:"mohan",age:40},
+						{name:"sohan",age:30},
+						{name:"rohan",age:37},
+						{name:"gohan",age:32}
+						];
+		//case1:
+		/*	var filtered=records.filter(recs=>{
+									if(recs.age>35){
+										return recs;
+									}
+							});
+		*/
+		
+		//case2:
+		/*	var filtered=records.filter(rec=>{
+											return rec.age<35;
+									});
+		*/
+
+		//case3:
+			var filtered=records.filter(rec=>rec.age>32);
+			
+			console.log(filtered);
+		</script>
+	</body>
+</html>

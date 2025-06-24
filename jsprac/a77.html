@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+			input{
+				border:1px solid #ccc;
+				padding:10px 20px;
+				border-radius:10px;
+			}
+		</style>
+	</head>
+	<body>	
+		UserName:<br>
+		<input type="text" name="uname" onfocus="unameFocus(this)" onblur="unameBlur(this)">
+		<script>
+			function unameFocus(ufld){
+				ufld.style.backgroundColor="yellow";
+			}
+			function unameBlur(ubld){
+				if(ubld.value.trim()==''){
+					ubld.style.backgroundColor="pink";
+				}
+				else{
+					ubld.style.backgroundColor="#86e752";
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function User(name,email){
+				this.name=name;
+				this.email=email;
+			}
+			User.prototype.login=function(){
+				console.log(`${this.name} is logging in...`);
+			}
+			User.prototype.logout=function(){
+				console.log(`${this.name} is logging out...`);
+			}
+			let st1=new Student('mohan','mohan@gmail.com');
+			console.log(st1);
+			st1.login();
+			st1.logout();
+			function Student(name,email){
+					//.......................NOT Ok..Error will be throwen
+				super(name,email);
+			}
+			let s=new Student('vicky','vix@gmail.com');
+			console.log(s);
+		</script>
+	</body>
+</html>

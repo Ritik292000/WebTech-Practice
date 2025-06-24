@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<form action="a11.html" onsubmit="checkForm()">
+			Email:<input type="email" id="eml" name="eml"><br>
+			<input type="submit" value="save">
+		</form>
+		<script>
+			var eml=document.querySelector("#eml");
+			function checkForm(){
+				if(eml.value.trim()==''){
+					
+					console.log(false);
+					return false;
+				}
+				else{
+					console.log(true);
+				}
+			}
+		</script>
+	</body>
+</html>

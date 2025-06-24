@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<input type="text" onkeypress="keyPress(this)">
+		<br><br>
+		<span id="x"></span>
+		<script>
+			var x=document.getElementById('x');
+			function keyPress(curElm){
+				x.innerHTML=curElm.value;
+			}
+		</script>
+	</body>
+</html>

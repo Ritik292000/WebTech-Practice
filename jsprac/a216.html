@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var records=[23,65,7,43,89];
+			console.log(records);
+			records.sort(compare);
+			function compare(x,y){
+				if(x>y){
+					return 1;
+				}
+				else if(x<y){
+					return -1;
+				}
+				else{
+					return 0;
+				}
+			}
+			console.log(records);
+		</script>
+	</body>
+</html>

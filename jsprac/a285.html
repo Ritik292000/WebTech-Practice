@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function Student(name,email){
+				this.name=name;
+				this.email=email;
+			}
+			Student.prototype.login=function(){
+				console.log(`${this.name} is logging in..`);
+			}
+			Student.prototype.logout=function(){
+				console.log(`${this.name} is logging out..`);
+			}
+			let st1=new Student('ritik','rchakrawarty55@gmail.com');
+			console.log(st1);
+
+			let st2=new Student('its rc','rc@gmail.com');
+			console.log(st2);
+		</script>
+	</body>
+</html>

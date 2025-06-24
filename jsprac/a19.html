@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<a href="a12.html">aa1</a><br>
+		<a name="x">aa2</a><br>
+		<a href="a13.html">aa3</a><br>
+		<a name="y">aa4</a><br>
+		<a>aa5</a><br>
+		<a href="a14.html">aa6</a><br>
+		<script>
+		//	var w=document.getElementsByTagName('a');
+		//	var w=document.querySelectorAll('[href]');
+		//	var w=document.querySelectorAll('[name]');
+		//	var w=document.anchors;
+			var w=document.links;
+		//	alert(w.length);
+
+			for(var i=0;i<w.length;i++){
+				alert(w[i].innerHTML);
+			}
+		</script>
+	</body>
+</html>

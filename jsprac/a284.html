@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			<!--case1-->
+			/*	class Student{
+					constructor(name,email){
+						this.name=name;
+						this.email=email;
+					}
+					login(){
+						console.log(`${this.name} is logging in..`);
+					}
+					logout(){
+						console.log(`${this.name} is logging out..`);
+					}
+				}
+				let st1=new Student('mukesh','muku@gmail.com');
+				console.log(st1);
+				
+				let st2=new Student('brijesh','biju@gmail.com');
+				console.log(st2);
+			*/
+
+			<!--case2-->
+				function Student(name,email){
+					this.name=name;
+					this.email=email;
+					this.login=function(){
+						console.log(`${this.name} is logging in...`);
+					};
+					this.logout=function(){
+						console.log(`${this.name} is logging out...`);
+					}
+				}
+
+				let st1=new Student('mukesh','muku@gamil.com');
+				console.log(st1);
+
+				let st2=new Student('brijesh','biju@gmail.com');
+				console.log(st2);
+				
+
+		</script>
+	</body>
+</html>
